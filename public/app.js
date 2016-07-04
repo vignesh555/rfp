@@ -1,0 +1,1 @@
+var myApp = angular.module('ui.tux.demo', ['ui.tux']);

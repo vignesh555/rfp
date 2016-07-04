@@ -1,0 +1,789 @@
+body {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    transition: opacity 1s;
+}
+
+@font-face {
+    font-family: 'helvatica75';
+    src: url('fonts/HelveticaNeueW01-75Bold.eot');
+    src: url('fonts/HelveticaNeueW01-75Bold.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueW01-75Bold.woff') format('woff'), url('fonts/HelveticaNeueW01-75Bold.ttf') format('truetype'), url('fonts/HelveticaNeueW01-75Bold.svg#helvatica75') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvatica65';
+    src: url('fonts/HelveticaNeueW01-65Medium.eot');
+    src: url('fonts/HelveticaNeueW01-65Medium.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueW01-65Medium.woff') format('woff'), url('fonts/HelveticaNeueW01-65Medium.ttf') format('truetype'), url('fonts/HelveticaNeueW01-65Medium.svg#helvatica65') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvatica55';
+    src: url('fonts/HelveticaNeueW01-55Roman.eot');
+    src: url('fonts/HelveticaNeueW01-55Roman.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueW01-55Roman.woff') format('woff'), url('fonts/HelveticaNeueW01-55Roman.ttf') format('truetype'), url('fonts/HelveticaNeueW01-55Roman.svg#helvatica55') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helvatica45';
+    src: url('fonts/HelveticaNeueW01-45Light.eot');
+    src: url('fonts/HelveticaNeueW01-45Light.eot?#iefix') format('embedded-opentype'), url('fonts/HelveticaNeueW01-45Light.woff') format('woff'), url('fonts/HelveticaNeueW01-45Light.ttf') format('truetype'), url('fonts/HelveticaNeueW01-45Light.svg#helvatica45') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ng-cloak {
+    opacity: 0;
+}
+
+.ng-invalid {
+    border: 1px solid red !important;
+}
+
+section {
+    padding-top: 30px;
+}
+
+.page-header h1 > small > a {
+    color: #999;
+}
+
+.page-header h1 > small > a:hover {
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.bs-social {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .bs-social {
+        text-align: left;
+    }
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+.bs-social-buttons {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.bs-social-buttons li {
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .visible-xs.collapse.in {
+        display: block!important;
+    }
+    .visible-xs.collapse {
+        display: none!important;
+    }
+}
+
+.show-grid {
+    margin-bottom: 15px;
+}
+
+
+/*
+ * Container
+ *
+ * Tweak to width of container.
+ */
+
+
+/*@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}*/
+
+
+/*
+ * Tabs
+ *
+ * Tweaks to the Tabs.
+ */
+
+.code .nav-tabs {
+    border-bottom: 1px solid #ccc;
+}
+
+.code pre,
+.code code {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.code .nav-tabs>li.active>a,
+.code .nav-tabs>li.active>a:hover,
+.code .nav-tabs>li.active>a:focus {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+}
+
+
+/*
+ * Button Inverse
+ *
+ * Buttons in the masthead.
+ */
+
+.btn-outline-inverse {
+    color: #fff;
+    background-color: transparent;
+    border-color: #cdbfe3;
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .btn-outline-inverse {
+        width: auto;
+        margin: 20px 5px 20px 0;
+        padding: 18px 24px;
+        font-size: 21px;
+    }
+}
+
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+    color: #563d7c;
+    text-shadow: none;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+
+/* Page headers */
+
+.bs-header {
+    padding: 30px 15px 40px;
+    /* side padding builds on .container 15px, so 30px */
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .15);
+    color: #cdbfe3;
+    background-color: #555;
+}
+
+.bs-header a {
+    color: #fff;
+    font-weight: normal;
+}
+
+.bs-header h1 {
+    color: #fff;
+}
+
+.bs-header p {
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+.bs-header .container {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .bs-header {
+        font-size: 30px;
+        text-align: left;
+        margin-top: 65px;
+    }
+    .bs-header h1 {
+        font-size: 100px;
+        line-height: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .bs-header p {
+        margin-right: 25%;
+    }
+}
+
+.navbar-inner {
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.175);
+}
+
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+
+/* By default it's not affixed in mobile views, so undo that */
+
+.bs-sidebar.affix {
+    position: static;
+}
+
+
+/* First level of nav */
+
+.bs-sidenav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #f7f5fa;
+    border-radius: 5px;
+}
+
+
+/* All levels of nav */
+
+.bs-sidebar .nav > li > a {
+    display: block;
+    color: #716b7a;
+    padding: 5px 20px;
+}
+
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #e5e3e9;
+    border-right: 1px solid #dbd8e0;
+}
+
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+    font-weight: bold;
+    color: #563d7c;
+    background-color: transparent;
+    border-right: 1px solid #563d7c;
+}
+
+
+/* Nav: second level (shown on .active) */
+
+.bs-sidebar .nav .nav {
+    display: none;
+    /* Hide by default, but at >768px, show it */
+    margin-bottom: 8px;
+}
+
+.bs-sidebar .nav .nav > li > a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 30px;
+    font-size: 90%;
+}
+
+
+/* Show and affix the side nav when space allows it */
+
+@media (min-width: 992px) {
+    .bs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-sidebar.affix,
+    .bs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-sidebar.affix {
+        position: fixed;
+        /* Undo the static from mobile first approach */
+        top: 80px;
+    }
+    .bs-sidebar.affix-bottom {
+        position: absolute;
+        /* Undo the static from mobile first approach */
+    }
+    .bs-sidebar.affix-bottom .bs-sidenav,
+    .bs-sidebar.affix .bs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 263px;
+    }
+}
+
+
+/* Not enough room on mobile for markup tab, js tab, and plunk btn.
+  And no one cares about plunk button on a phone anyway */
+
+@media only screen and (max-device-width: 480px) {
+    #plunk-btn {
+        display: none;
+    }
+}
+
+.navbar-nav .dropdown .navbar-brand {
+    max-width: 100%;
+    margin-right: inherit;
+    margin-left: inherit;
+}
+
+.header-placeholder {
+    height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown.open > .navbar-brand + .dropdown-menu {
+        left: 10px;
+    }
+    .header-placeholder {
+        height: 50px;
+    }
+    .navbar-nav .dropdown .navbar-brand {
+        max-width: 200px;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+}
+
+.scroll-spy-demo .collapse.navbar-collapse {
+    border-bottom: 1px solid #aaa;
+    padding: 0;
+}
+
+.scroll-spy-demo .scroll-link {
+    font-size: 13px;
+    font-family: 'helvatica75';
+}
+
+.scroll-spy-demo ul.navbar-nav > li a.scroll-link {
+    background-color: transparent;
+    font-family: 'helvatica75';
+    color: #808285;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+.scroll-spy-demo ul.navbar-nav > li a.scroll-link:hover,
+.scroll-spy-demo ul.navbar-nav > li a.scroll-link.active {
+    border-top: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 0px solid transparent;
+    border-left: 1px solid #aaaaaa;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi╬ô├ç┬¬pZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==");
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ecebeb), color-stop(100%, #ffffff));
+    background-image: -moz-linear-gradient(top, #ecebeb 0%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(top, #ecebeb 0%, #ffffff 100%);
+    background-image: linear-gradient(to bottom, #ecebeb 0%, #ffffff 100%);
+    color: #d20000;
+    box-shadow: 6px -4px 14px -4px #c8c8c8, -6px -4px 14px -4px #c8c8c8;
+}
+
+.scroll-spy-demo ul.navbar-nav > a.active.scroll-link {
+    border-top: 3px solid #d20000;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 0px solid transparent;
+    border-left: 1px solid #aaaaaa;
+    background-color: #fff;
+    color: #d20000;
+    box-shadow: 6px -4px 14px -4px #c8c8c8, -6px -4px 14px -4px #c8c8c8;
+    top: 1px;
+}
+
+.scroll-spy-demo .scroll-spy-cointainer {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.scroll-spy-demo .scroll-spy-cointainer section {
+    padding-top: 5px;
+}
+
+.scroll-spy-demo .scroll-spy-cointainer section h2 {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .scroll-spy-demo .collapse.navbar-collapse {
+        display: block;
+    }
+}
+
+#collapse,
+#list-side-collapse,
+#list-collapse,
+#position,
+#list-position,
+#list-side-position {
+    display: none;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+#header .tux-header .navbar-default {
+    position: relative;
+}
+
+#header .page-header {
+    border: none;
+}
+
+#header .tux-header {
+    border-top: 1px solid #eee;
+}
+
+section.tux-sidebar {
+    posItion: fixed;
+    top: 300px;
+    right: 50px;
+}
+
+ul.side-menu {
+    list-style-type: none;
+    margin-top: 100px;
+    padding: 0px;
+    width: 100% !important;
+}
+
+@media (max-width: 992px) {
+    section.tux-sidebar {
+        display: none
+    }
+}
+
+#nav-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+#introduction h1 {
+    margin-top: 100px;  
+}
+
+#nav-header.tux-header nav .first-level-wrapper > ul.drpdwn-menu {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.data-grid {
+    width: 100%;
+    height: 450px;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.side-menu a {
+    padding: 3px 0px;
+    display: block;
+    padding-left: 10px;
+    margin-left: 15px;
+}
+
+#list-side-introduction,#list-side-quickstart,#list-side-Components,#list-side-lexus-theme {
+    margin-left: 0px;
+}
+
+.side-menu a.active {
+    border-left: 2px solid #D20000;
+    color: #D20000;
+    font-weight: bold;
+}
+
+.status-holder {
+    width: 70%;
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    border-radius: 18px;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    padding: 3px 0;
+    text-transform: uppercase;
+}
+
+.status-holder.Done {
+    background: #24b685;
+}
+
+.status-holder.Pending {
+    background: #ea5a5a;
+}
+
+.status-holder.Due {
+    background: #d4aa00;
+}
+
+.edit-select {
+    width: 100%;
+    height: 100%;
+}
+
+.status-wrapper {
+    height: 100%;
+}
+
+.show-grid {
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    padding: 45px 15px 15px;
+    border-style: solid;
+    position: relative;
+}
+
+.show-grid:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #337ab7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+}
+
+.config-sec {
+    margin-bottom: 20px;
+}
+
+.example-separator {
+    border-top: 1px solid #ddd;
+    margin: 30px 0px;
+    margin-left: -15px;
+    margin-right: -15px;
+    clear: both;
+}
+
+.example-sample {
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.typeahead-item {
+    paddiing: 20px 3px;
+}
+
+.typeahead-span {
+    display: block;
+}
+
+.multiselect-holder {
+    margin-bottom: 20px;
+}
+
+.disable-exp-col {
+    opacity: 0.6;
+}
+
+.dependency-list {
+    margin-top: 5px;
+}
+
+.affix-fixed-top{
+    top: -300px !important;
+}
+
+pre.tux-doc {
+    background: #fff;
+    width: 100%;
+    font-family: "helvatica55";
+    font-size: 14px;
+}
+
+pre.tux-doc table td {
+    max-width: 400px;
+}
+
+.page-header h1 {
+    margin: 0px;
+}
+
+.tux-desc {
+    margin: 20px 0px;
+}
+.holiday a {
+    background: #ffeab7;
+}
+
+.right-nav-links {
+    float: right;
+    padding: 20px 43px 17px 45px;
+    font-family: 'helvatica75';
+    color: #808285;
+}
+.docs-logo {
+    padding: 10px 30px 10px;
+}
+
+.tab-content > .tab-pane {
+    position: relative;
+}
+
+.clipboard-copy {
+    cursor: pointer;
+    padding: 5px 6px;
+    border: 1px solid #eee;
+    background-color: #eee;
+    background-image: linear-gradient(#fcfcfc, #eee);
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    position: absolute;
+    right: 20px;
+    top: -44px;
+}
+
+.clipboard-copy:hover{
+        background-color: #ddd;
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: #ccc
+}
+
+.clipboard-copy:active{
+    background-color: #dcdcdc;
+    background-image: none;
+    border-color: #b5b5b5;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+
+#introduction ul {
+    list-style-type: none;
+}
+#quick-start h4 {
+    margin-bottom: 0px;
+}
+
+#quick-start h2 {
+    font-size: 20px;
+}
+
+#quick-start h4 span{
+    font-size: 12px;
+}
+
+.left-margin {
+    margin-left: 30px;
+}
+
+pre.tux-doc {
+    white-space: normal;
+    word-break: break-word;
+}
+
+
+.components .page-header h2 {
+    margin-top: 0px;
+}
+
+.components h1 {
+    margin-top: 40px;
+}
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.right-nav-links a{
+    text-transform: uppercase;
+    color: #808285;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#steps {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#steps li {
+     float: left;
+     text-align: center;
+     margin-top: 20px;
+}
+
+#steps li span{
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 12px;
+    color:rgb(103,106,110);
+    font-weight: bold;
+}
+
+#improve-doc i{
+    font-size: 18px;
+}
+
+#version-name {
+    background: #2688da;
+    color: #fff;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-size: 10px;
+}
+
+.step-number {
+    background: #2688da;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 20px;
+    font-size: 10px;
+    position: relative;
+    top: -3px;
+    display: inline-block;
+}
+.login_wrapper {
+    height: 700px;
+}
+
+
+.ui-lexus .scroll-spy-demo ul.navbar-nav > li a.scroll-link:hover,.ui-lexus .scroll-spy-demo ul.navbar-nav > li a.scroll-link.active {
+  color: #0a859e;
+}
+
+.ui-lexus .side-menu a.active {
+    border-left: 2px solid #0a859e;
+    color: #0a859e;
+}

@@ -1,0 +1,9 @@
+{
+    "server": {
+        "portNumber": 3000,
+        "description": "Development Environment"
+    },
+    "database": {
+        "url": ""
+    }
+}

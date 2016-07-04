@@ -1,0 +1,93 @@
+.ui-lexus .horizontal-logo h1 {
+  color: #0a859e; }
+.ui-lexus nav ul.primary-nav > li.open > a {
+  color: #0a859e; }
+.ui-lexus .image-gallery .tiles-wrapper .tiles:hover:after {
+  border: 2px solid #0a859e; }
+.ui-lexus .nav-tabs > li.active > a:after,
+.ui-lexus .nav-tabs > li > a:hover:after,
+.ui-lexus .nav-tabs > li > a:focus:after {
+  color: #0a859e; }
+.ui-lexus .carousel-cont .carousel .active, .ui-lexus .modal-dialog .modal-body .carousel-indicator .carousel-cont .active {
+  box-shadow: 0 0 0 2px #0a859e inset; }
+.ui-lexus .tux-wizard .carousel .active {
+  box-shadow: none; }
+.ui-lexus .modal-dialog .modal-body .gallery-detail .product-discount {
+  background-color: #0a859e; }
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a,
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a:hover,
+.ui-lexus [vertical="true"] .nav-tabs > li > a:hover,
+.ui-lexus [vertical="true"] .nav-tabs > li > a:focus,
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a:focus {
+  border-bottom: 1px dotted #ccc; }
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a:after,
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a:hover:after,
+.ui-lexus [vertical="true"] .nav-tabs > li > a:hover:after,
+.ui-lexus [vertical="true"] .nav-tabs > li > a:focus:after,
+.ui-lexus [vertical="true"] .nav-tabs > li.active > a:focus:after {
+  color: #0a859e; }
+.ui-lexus .vertical-image-gallery .vertical .active {
+  box-shadow: 0 0 0 2px #0a859e inset; }
+.ui-lexus .tux-wizard .steps-indicator li.current .wizard-menu-title,
+.ui-lexus .tux-wizard .steps-indicator li.editing .wizard-menu-title {
+  color: #0a859e; }
+.ui-lexus .tux-wizard .steps-indicator li.current a,
+.ui-lexus .tux-wizard .steps-indicator li.editing a {
+  color: #0a859e; }
+.ui-lexus .header-section-right .page-option-panel ul li a.active:before,
+.ui-lexus .header-section-right .page-option-panel ul li a.user-name.active,
+.ui-lexus .header-section-right .page-option-panel ul li a.user-name.active:after,
+.ui-lexus .header-section-right .page-option-panel ul li a.user-settings.active:after,
+.ui-lexus nav ul.primary-nav > li.mega-menu .second-level-wrapper ul.drpdwn-menu li a:after {
+  color: #0a859e; }
+.ui-lexus .header-section-right .page-option-panel ul li a.tooltip-open:before, .ui-lexus .header-section-right .page-option-panel ul li a.user-name.tooltip-open, .ui-lexus .header-section-right .page-option-panel ul li a.user-name.tooltip-open:after {
+  color: #0a859e; }
+.ui-lexus .input-group .go-btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0A849D), to(#055464));
+  background-image: -moz-linear-gradient(top, #0A849D, #055464);
+  background-image: -webkit-linear-gradient(top, #0A849D, #055464);
+  background-image: linear-gradient(to bottom, #0A849D, #055464); }
+.ui-lexus .selected-htab,
+.ui-lexus .tab-section.horizontal .tab-links li a:hover,
+.ui-lexus .tab-section.horizontal .tab-links li.active a {
+  border-bottom: 3px solid #0a859e; }
+.ui-lexus .selected-htab:after,
+.ui-lexus .tab-section.horizontal .tab-links li a:hover:after,
+.ui-lexus .tab-section.horizontal .tab-links li.active a:after,
+.ui-lexus .selected-vtab:after,
+.ui-lexus .tab-section.vertical .tab-links li:hover a:after,
+.ui-lexus .tab-section.vertical .tab-links li.active a:after {
+  color: #0a859e; }
+.ui-lexus .trwd-image-gallery .tiles:hover:after,
+.ui-lexus .login_head,
+.ui-lexus .trwd-vertical-gallery .vertical-gallery .slick-current:after,
+.ui-lexus .tab-section.vertical .tab-links li.active {
+  border-color: #0a859e; }
+.ui-lexus .copyright-container .feedback-trigger {
+  border-color: transparent transparent #0a859e transparent; }
+.ui-lexus .trwd-wizard .wizard-nav-link.active a {
+  color: #0a859e; }
+@media only screen and (min-width: 992px) {
+  .ui-lexus nav ul.primary-nav li.page-name.visited a {
+    border-top: none; }
+  .ui-lexus nav ul.primary-nav li.page-name.visited a {
+    border-top: 3px solid #0a859e;
+    color: #0a859e; }
+  .ui-lexus nav ul.primary-nav > li.mega-menu .first-level-wrapper ul li.active, .ui-lexus nav ul.primary-nav > li.mega-menu .first-level-wrapper ul li.firstNavSelect {
+    border-left: 3px solid #0a859e; }
+  .ui-lexus nav ul.primary-nav > li.mega-menu .first-level-wrapper ul li.active a:after,
+  .ui-lexus nav ul.primary-nav > li.active > a,
+  .ui-lexus nav ul.primary-nav > li > a:hover,
+  .ui-lexus nav .first-level-wrapper > ul.drpdwn-menu > li > a:hover,
+  .ui-lexus nav ul.primary-nav > li.mega-menu .first-level-wrapper ul li.firstNavSelect a:after {
+    color: #0a859e; }
+  .ui-lexus .nav-tabs > li.active > a,
+  .ui-lexus .nav-tabs > li.active > a:hover,
+  .ui-lexus .nav-tabs > li > a:hover,
+  .ui-lexus .nav-tabs > li > a:focus,
+  .ui-lexus .nav-tabs > li.active > a:focus {
+    border-bottom: 3px solid #0a859e; }
+  .ui-lexus [vertical="true"] .nav-tabs > li.active {
+    border-left: 3px solid #0a859e; } }
+
+/*# sourceMappingURL=ui-lux.css.map */
