@@ -10,7 +10,8 @@ mongoose.connect(config.database.url);
 //Model Configuration
 require("./models/rfpModel")(app, mongoose, restful);
 
+var portNumber = process.env.PORT || 8080;
 //Server Start Up
-app.listen(config.server.portNumber, function() {
-    console.log("Server has been Started " + config.server.portNumber);
+app.listen(portNumber, function() {
+    console.log("Server has been Started " + portNumber);
 });
