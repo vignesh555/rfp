@@ -4,6 +4,6 @@
         "description": "Development Environment"
     },
     "database": {
-        "url": "mongodb://localhost/rfpCollection"
+        "url": "mongodb://test:test@ds011705.mlab.com:11705/rfp"
     }
 }
