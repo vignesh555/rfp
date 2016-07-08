@@ -1,6 +1,6 @@
 {
     "server": {
-        "portNumber": 3000,
+        "portNumber": 8080,
         "description": "Development Environment"
     },
     "database": {
