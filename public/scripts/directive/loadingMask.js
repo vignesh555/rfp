@@ -33,7 +33,6 @@
         }
     }
 
-    //Loading Mask For the Internalpage 
     function fnLoadingMaskInternal($rootScope) {
         return {
             restrict: "E",
