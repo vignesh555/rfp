@@ -1,0 +1,94 @@
+<a class="pull-left spacingLeftRight" ng-href="#/list">back to list View</a>
+<a class="pull-right spacingLeftRight" ng-href="#/bulkInsert">Bulk Insert</a>
+<div>
+    <tux-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</tux-alert>
+    <form name="rfpForm
+" class="tux-form validate-form" ng-submit="submit()" novalidate>
+        <div class="form-wrapper">
+            <div class="field-wrapper">
+                <div class="row-wrapper">
+                    <div class="col-lg-6 col-sm-6 clear">
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="field">Date</label>
+                            <input type="date" class="form-control" id="field" placeholder="Enter" name="rfpDate" ng-model="form.rfpDate" placeholder="MM-dd-yyyy" min="01-01-2016" max="12-31-2025" required>
+                            <label ng-show="(rfpForm.rfpDate.$dirty || submitted) && rfpForm.rfpDate.$error.required" class="error" for="mandatry_field">This field is required.</label>
+                            <label ng-show="rfpForm.rfpDate.$error.date" class="error" for="mandatry_field">Please enter a date in the format mm-dd-yyyy.</label>
+                            <!--Error class will be added to indicate error in the field-->
+                        </div>
+                        <div class="form-group">
+                            <label class="tms-form-label mandatory-label" for="rfp_Name">RFP Name</label>
+                            <input type="text" class="form-control" id="rfp_Name" placeholder="Enter" autocomplete="off" name="rfpName" ng-model="form.rfpName" required>
+                            <label ng-show="(rfpForm.rfpName.$dirty || submitted) && rfpForm.rfpName.$error.required" id="rfp_Name-error" class="error" for="rfp_Name">This field is required.</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpClientName">Client</label>
+                            <input type="text" class="form-control" id="rfp_rfpClientName" placeholder="Enter" autocomplete="off" name="rfpClientName" ng-model="form.rfpClientName" required>
+                            <label ng-show="(rfpForm.rfpClientName.$dirty || submitted) && rfpForm.rfpClientName.$error.required" id="rfp_rfpClientName-error" class="error" for="rfp_rfpClientName">This field is required.</label>
+                        </div>
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpTechStack">Technical Stack</label>
+                            <input type="text" class="form-control" id="rfp_rfpTechStack" placeholder="Enter" autocomplete="off" name="rfpTechStack" ng-model="form.rfpTechStack" required>
+                            <label ng-show="(rfpForm.rfpTechStack.$dirty || submitted) && rfpForm.rfpTechStack.$error.required" id="rfp_rfpTechStack-error" class="error" for="rfp_rfpTechStack">This field is required.</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpVertical">Vertical</label>
+                            <input type="text" class="form-control" id="rfp_rfpVertical" placeholder="Enter" autocomplete="off" name="rfpVertical" ng-model="form.rfpVertical" required>
+                            <label ng-show="(rfpForm.rfpVertical.$dirty || submitted) && rfpForm.rfpVertical.$error.required" id="rfp_rfpVertical-error" class="error" for="rfp_rfpVertical">This field is required.</label>
+                        </div>
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpLocation">Location</label>
+                            <input type="text" class="form-control" id="rfp_rfpLocation" placeholder="Enter" autocomplete="off" name="rfpLocation" ng-model="form.rfpLocation" required>
+                            <label ng-show="(rfpForm.rfpLocation.$dirty || submitted) && rfpForm.rfpLocation.$error.required" id="rfp_rfpLocation-error" class="error" for="rfp_rfpLocation">This field is required.</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpPocName">POC Name</label>
+                            <input type="text" class="form-control" id="rfp_rfpPocName" placeholder="Enter" autocomplete="off" name="rfpPocName" ng-model="form.rfpPocName" required>
+                            <label ng-show="(rfpForm.rfpPocName.$dirty || submitted) && rfpForm.rfpPocName.$error.required" id="rfp_rfpPocName-error" class="error" for="rfp_rfpPocName">This field is required.</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="tms-form-label mandatory-label" for="minlength">POC ID</label>
+                            <input type="text" class="form-control error" id="minlength" placeholder="Enter" name="rfpPocId" ng-model="form.rfpPocId" ng-minlength="6" required>
+                            <label ng-show="(rfpForm.rfpPocId.$dirty || submitted) && rfpForm.rfpPocId.$error.required" id="minlength-error" class="error" for="minlength">This field is required.</label>
+                            <label ng-show="rfpForm.rfpPocId.$error.minlength" id="minlength-error" class="error" for="minlength">Please enter at least 6 characters.</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <!--Error class will be added to indicate error in the field-->
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpStatus">Status</label>
+                            <!-- <input type="text" class="form-control" id="rfp_rfpStatus" placeholder="Enter" autocomplete="off" name="rfpStatus" ng-model="form.rfpStatus" required> -->
+                            <select class="form-control" id="rfp_rfpStatus" name="rfpStatus" ng-model="form.rfpStatus" required>
+                                <option value="">Select a Status</option>
+                                <option value="Submitted">Submitted</option>
+                                <option value="Drop off">Drop off</option>
+                                <option value="In Progress">In Progress</option>
+                                <option value="On Hold">On Hold</option>
+                                <option value="Not in our scope">Not in our scope</option>
+                            </select>
+                            <label ng-show="(rfpForm.rfpStatus.$dirty || submitted) && rfpForm.rfpStatus.$error.required" id="rfp_rfpStatus-error" class="error" for="rfp_rfpStatus">This field is required.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 form-action-panel">
+                <input class="btn btn-primary pull-right" type="submit" value="Done">
+                <input type="reset" ng-click="resetForm()" class="btn btn-default pull-left" value="Cancel" data-dismiss="modal">
+                <div class="clear"></div>
+            </div>
+        </div>
+    </form>
+</div>

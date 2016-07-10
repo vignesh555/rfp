@@ -1,38 +1,57 @@
-module.exports = function(app, mongoose, restful) {
-    var rfpTrackerModel = app.resource = restful.model('rfpTracker', mongoose.Schema({
-            lastUpdateDate: Date,
-            refName: String,
-            client: String,
-            techStack: String,
-            vertical: String,
-            location: String,
-            pocName: String,
-            pocId: Number,
-            status: String,
-            createdDate: {
-                type: Date,
-                default: Date.now
-            }
-        }))
-        .methods(['get', 'post', 'put', 'delete']);
+var rfpLogger = require("../lib/logger"),
+    moment = require("moment"),
+    restful = require('node-restful'),
+    mongoose = restful.mongoose;
 
-    rfpTrackerModel.after('post', function(req, res, next) {
-        res.json({
-            "status": "SuccessFully Saved"
-        });
+
+var rfpTrackerModel = restful.model('rfpTracker', mongoose.Schema({
+        rfpDate: String,
+        rfpName: String,
+        rfpClientName: String,
+        rfpTechStack: String,
+        rfpVertical: String,
+        rfpLocation: String,
+        rfpPocName: String,
+        rfpPocId: Number,
+        rfpStatus: String,
+        rfpCreatedDate: {
+            type: Date,
+            default: Date.now
+        }
+    }))
+    .methods(['get', 'post', 'put', 'delete']);
+
+rfpTrackerModel.before('get', function(req, res, next) {
+    rfpLogger.log('info', 'Hello distributed log files!');
+    next();
+});
+
+rfpTrackerModel.before('post', function(req, res, next) {
+    req.body.rfpDate = moment(req.body.rfpDate).format("DD/MM/YYYY");
+    console.log(req.body.rfpDate);
+    rfpLogger.log('info', req.body);
+    next();
+});
+
+rfpTrackerModel.after('post', function(req, res, next) {
+    res.json({
+        "status": "SuccessFully Saved"
     });
+});
 
-    rfpTrackerModel.after('put', function(req, res, next) {
-        res.json({
-            "status": "SuccessFully Updated"
-        });
+rfpTrackerModel.after('put', function(req, res, next) {
+    res.json({
+        "status": "SuccessFully Updated"
     });
+});
 
-    rfpTrackerModel.after('delete', function(req, res, next) {
-        res.json({
-            "status": "SuccessFully Removed"
-        });
+rfpTrackerModel.after('delete', function(req, res, next) {
+    res.json({
+        "status": "SuccessFully Removed"
     });
+});
 
-    rfpTrackerModel.register(app, '/rfp');
-};
+
+var rfpModelTracker = function(app, mongoose, restful) {};
+
+module.exports.rfpTrackerModelExport = rfpTrackerModel;

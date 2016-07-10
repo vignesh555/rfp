@@ -14,3 +14,6 @@ rfptracker
 
 4) Open the Browser
    http://localhost:3000
+
+5) Local Database : "url": "mongodb://localhost:27017/rfp"
+   Mongolab data base: "url": "mongodb://test:test@ds011705.mlab.com:11705/rfp"

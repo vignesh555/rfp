@@ -1,0 +1,17 @@
+<a class="pull-left spacingLeftRight" ng-href="#/list">back to list View</a>
+<tux-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</tux-alert>
+<br/>
+<br/>
+<div class="form-wrapper clearBoth">
+    <div class="field-wrapper">
+        <div class="row-wrapper">
+            <div class="col-lg-6 col-sm-6 clear">
+                <div class="form-group">
+                    <input type="file" file-model="myFile" />
+                    <br/>
+                    <button ng-click="uploadFile()">Bulk Insert</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

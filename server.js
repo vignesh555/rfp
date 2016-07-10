@@ -3,12 +3,13 @@ var app = require("./lib/serverConfig").app,
     restful = require("./lib/serverConfig").restful,
     config = require("config");
 
-
+console.log(config.database.url);
 //Database Configuration
 mongoose.connect(config.database.url);
 
 //Model Configuration
-require("./models/rfpModel")(app, mongoose, restful);
+var registerRFPModel = require("./models/rfpModel").rfpTrackerModelExport;
+registerRFPModel.register(app, '/rfp');
 
 var portNumber = process.env.PORT || 8080;
 //Server Start Up

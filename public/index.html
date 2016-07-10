@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ui.tux.demo" id="top">
+<html lang="en" ng-app="rfpApp" id="top">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Angular Grid</title>
+    <title>RFP</title>
     <meta name="description" content="AngularJS (Angular) Grid ">
-    <script src="assets/angular/angular.min.js"></script>
-    <script src="assets/angular/angular-animate.min.js"></script>
-    <script src="assets/angular/angular-sanitize.min.js"></script>
-    <script type="text/javascript" src="assets/angular/ag-grid.min.js"></script>
-    <script src="assets/ui-tux-tpls.js"></script>
-    <script src="app.js"></script>
-    <script src="appGrid.js"></script>
-    <script src="assets/data/data.js"></script>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/rainbow.css" />
-    <link rel="stylesheet" href="assets/css/demo.css" />
-    <link rel="stylesheet" href="assets/css/ui-tux.css" />
-    <link rel="stylesheet" href="assets/css/ui-lux.css" />
+    <link rel="stylesheet" href="css/rainbow.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/ui-tux.css" />
+    <link rel="stylesheet" href="css/ui-lux.css" />
+    <script src="scripts/lib/angular/angular.min.js"></script>
+    <script src="scripts/lib/angular/angular-route.min.js"></script>
+    <script src="scripts/lib/angular/angular-resource.min.js"></script>
+    <script src="scripts/lib/angular/angular-animate.min.js"></script>
+    <script src="scripts/lib/angular/angular-sanitize.min.js"></script>
+    <script src="scripts/lib/angular/ag-grid.min.js"></script>
+    <script src="scripts/lib/ui-tux-tpls.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/createController.js"></script>
+    <script src="scripts/controllers/gridController.js"></script>
+    <script src="scripts/controllers/bulkInsertController.js"></script>
+    <script src="scripts/factory/shareService.js"></script>
+    <script src="scripts/service/fileUploadService.js"></script>
+    <script src="scripts/directive/fileUpload.js"></script>
+    <script src="scripts/directive/loadingMask.js"></script>
+    <!--  <script src="assets/data/data.js"></script> -->
 </head>
 
 <body>
-    <div ng-controller="AgGridDemoCtrl">
-        <div class="grid-section">
-            <h3>Editable grid</h3>
-            <div ag-grid="gridOptions1" class="ag-fresh data-grid tux-grid"></div>
-        </div>
-    </div>
-
+    <loading-mask loading-flag="loadingFlag" loading-text="{{loadingText}}"></loading-mask>
+    <ng-view></ng-view>
 </body>
 
 </html>
-
