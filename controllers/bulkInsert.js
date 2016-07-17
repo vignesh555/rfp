@@ -21,7 +21,8 @@ var parseMultidataForm = function(req, resp, app) {
 
 var modifyJson = function(resultObj) {
     resultObj.rfpStatus = resultObj["Status"];
-    resultObj.rfpDate = resultObj["Date"];
+    resultObj.rfpStartDate = resultObj["Start Date"];
+    resultObj.rfpEndDate = resultObj["End Date"];
     resultObj.rfpName = resultObj["RFP Name"];
     resultObj.rfpTechStack = resultObj["Tech Stach"];
     resultObj.rfpVertical = resultObj["Vertical"];
@@ -29,6 +30,9 @@ var modifyJson = function(resultObj) {
     resultObj.rfpPocId = resultObj["POC ID"];
     resultObj.rfpClientName = resultObj["Client Name"];
     resultObj.rfpLocation = resultObj["Location"];
+    resultObj.rfpEngagementType = resultObj["Engagement Type"];
+
+
 
     delete resultObj["Status"];
     delete resultObj["Date"];

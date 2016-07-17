@@ -2,7 +2,7 @@
 
 (function() {
 
-    angular.module("rfpApp", ['ui.tux', 'ngRoute', 'ngResource']);
+    angular.module("rfpApp", ['ui.tux', 'ngRoute', 'ngResource', 'ngBootstrap']);
     angular.module("rfpApp").config(config);
     angular.module("rfpApp").run(runFn);
 

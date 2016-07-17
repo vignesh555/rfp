@@ -11,9 +11,10 @@
                         <div class="form-group">
                             <!--Error class will be added to indicate error in the field-->
                             <label class="tms-form-label mandatory-label" for="field">Date</label>
-                            <input type="date" class="form-control" id="field" placeholder="Enter" name="rfpDate" ng-model="form.rfpDate" placeholder="MM-dd-yyyy" min="01-01-2016" max="12-31-2025" required>
+                            <input type="daterange" class="form-control" id="field" placeholder="Enter" name="rfpDate" ng-model="form.rfpDate" placeholder="MM-dd-yyyy" required>
                             <label ng-show="(rfpForm.rfpDate.$dirty || submitted) && rfpForm.rfpDate.$error.required" class="error" for="mandatry_field">This field is required.</label>
                             <label ng-show="rfpForm.rfpDate.$error.date" class="error" for="mandatry_field">Please enter a date in the format mm-dd-yyyy.</label>
+                            <!--  <input type="daterange" ng-model="dates1">  -->
                             <!--Error class will be added to indicate error in the field-->
                         </div>
                         <div class="form-group">
@@ -65,9 +66,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-6">
                         <div class="form-group">
-                            <!--Error class will be added to indicate error in the field-->
                             <label class="tms-form-label mandatory-label" for="rfp_rfpStatus">Status</label>
-                            <!-- <input type="text" class="form-control" id="rfp_rfpStatus" placeholder="Enter" autocomplete="off" name="rfpStatus" ng-model="form.rfpStatus" required> -->
                             <select class="form-control" id="rfp_rfpStatus" name="rfpStatus" ng-model="form.rfpStatus" required>
                                 <option value="">Select a Status</option>
                                 <option value="Submitted">Submitted</option>
@@ -77,6 +76,16 @@
                                 <option value="Not in our scope">Not in our scope</option>
                             </select>
                             <label ng-show="(rfpForm.rfpStatus.$dirty || submitted) && rfpForm.rfpStatus.$error.required" id="rfp_rfpStatus-error" class="error" for="rfp_rfpStatus">This field is required.</label>
+                        </div>
+                        <div class="form-group">
+                            <label class="tms-form-label mandatory-label" for="rfp_rfpEngagementType">Engagement Type</label>
+                            <select class="form-control" id="rfp_rfpEngagementType" name="rfpEngagementType" ng-model="form.rfpEngagementType" required>
+                                <option value="">Select a Engagement Type</option>
+                                <option value="Migration">Migration</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Re-Design">Re-Design</option>
+                            </select>
+                            <label ng-show="(rfpForm.rfpEngagementType.$dirty || submitted) && rfpForm.rfpEngagementType.$error.required" id="rfp_rfpEngagementType-error" class="error" for="rfp_rfpEngagementType">This field is required.</label>
                         </div>
                     </div>
                 </div>

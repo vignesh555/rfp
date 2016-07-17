@@ -5,15 +5,60 @@
 
         var columnDefs = [
             //{ headerName: "S.No", field: "sno", width: 50, filter: CustomFilter },
-            { headerName: "_id", field: "_id", filter: CustomFilter, hide: true },
-            { headerName: "Date", field: "rfpDate", width: 100, filter: CustomFilter },
-            { headerName: "RFP Name", field: "rfpName", width: 100, filter: CustomFilter },
-            { headerName: "Client Name", field: "rfpClientName", width: 100, filter: CustomFilter },
-            { headerName: "Tech Stach", field: "rfpTechStack", width: 100, filter: CustomFilter },
-            { headerName: "Vertical", field: "rfpVertical", width: 100 },
-            { headerName: "Location", field: "rfpLocation", width: 100 },
-            { headerName: "POC Name", field: "rfpPocName", width: 100, filter: CustomFilter },
-            { headerName: "POC ID", field: "rfpPocId", width: 100, filter: CustomFilter }, {
+            {
+                headerName: "_id",
+                field: "_id",
+                filter: CustomFilter,
+                hide: true
+            }, {
+                headerName: "Start Date",
+                field: "rfpStartDate",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "End Date",
+                field: "rfpEndDate",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "RFP Name",
+                field: "rfpName",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "Client Name",
+                field: "rfpClientName",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "Tech Stach",
+                field: "rfpTechStack",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "Vertical",
+                field: "rfpVertical",
+                width: 100
+            }, {
+                headerName: "Location",
+                field: "rfpLocation",
+                width: 100
+            }, {
+                headerName: "POC Name",
+                field: "rfpPocName",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "POC ID",
+                field: "rfpPocId",
+                width: 100,
+                filter: CustomFilter
+            }, {
+                headerName: "Engagement Type",
+                field: "rfpEngagementType",
+                width: 100,
+                filter: CustomFilter
+            }, {
                 headerName: "Status",
                 field: "rfpStatus",
                 width: 100,
@@ -122,7 +167,9 @@
             var that = this;
             return {
                 getModel: function() {
-                    var model = { value: that.filterText.value };
+                    var model = {
+                        value: that.filterText.value
+                    };
                     return model;
                 },
                 setModel: function(model) {

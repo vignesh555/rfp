@@ -5,7 +5,9 @@ var rfpLogger = require("../lib/logger"),
 
 
 var rfpTrackerModel = restful.model('rfpTracker', mongoose.Schema({
-        rfpDate: String,
+        rfpStartDate: String,
+        rfpEndDate: String,
+        rfpEngagementType: String,
         rfpName: String,
         rfpClientName: String,
         rfpTechStack: String,
@@ -27,8 +29,6 @@ rfpTrackerModel.before('get', function(req, res, next) {
 });
 
 rfpTrackerModel.before('post', function(req, res, next) {
-    req.body.rfpDate = moment(req.body.rfpDate).format("DD/MM/YYYY");
-    console.log(req.body.rfpDate);
     rfpLogger.log('info', req.body);
     next();
 });
