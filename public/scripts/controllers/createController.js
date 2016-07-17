@@ -42,10 +42,29 @@
 
 
         scope.resetForm = function() {
-            scope.form = {};
+            /*scope.form.rfpDate.startDate = "";
+            scope.form.rfpDate.endDate = "";
+            scope.form = {};*/
+            scope.resetFormFields();
             scope.rfpForm.$setPristine();
             scope.rfpForm.$setUntouched();
             scope.submitted = false;
+        };
+
+        scope.resetFormFields = function() {
+            scope.form.rfpClientName = "";
+            scope.form.rfpEngagementType = "";
+            scope.form.rfpLocation = "";
+            scope.form.rfpName = "";
+            scope.form.rfpPocId = "";
+            scope.form.rfpPocName = "";
+            scope.form.rfpStatus = "";
+            scope.form.rfpTechStack = "";
+            scope.form.rfpVertical = "";
+            /*scope.form.rfpDate = {
+                startDate: null,
+                endDate: null
+            };*/
         };
 
         scope.clearLoadingImage = function() {

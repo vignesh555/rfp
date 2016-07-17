@@ -1,5 +1,6 @@
+"use strict";
+
 var rfpLogger = require("../lib/logger"),
-    moment = require("moment"),
     restful = require('node-restful'),
     mongoose = restful.mongoose;
 
@@ -33,25 +34,23 @@ rfpTrackerModel.before('post', function(req, res, next) {
     next();
 });
 
-rfpTrackerModel.after('post', function(req, res, next) {
+rfpTrackerModel.after('post', function(req, res) {
     res.json({
         "status": "SuccessFully Saved"
     });
 });
 
-rfpTrackerModel.after('put', function(req, res, next) {
+rfpTrackerModel.after('put', function(req, res) {
     res.json({
         "status": "SuccessFully Updated"
     });
 });
 
-rfpTrackerModel.after('delete', function(req, res, next) {
+rfpTrackerModel.after('delete', function(req, res) {
     res.json({
         "status": "SuccessFully Removed"
     });
 });
 
-
-var rfpModelTracker = function(app, mongoose, restful) {};
 
 module.exports.rfpTrackerModelExport = rfpTrackerModel;

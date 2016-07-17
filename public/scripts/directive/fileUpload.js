@@ -1,3 +1,5 @@
+"use strict";
+
 (function() {
 
     angular.module("rfpApp").directive('fileModel', ['$parse', function($parse) {

@@ -1,3 +1,5 @@
+"use strict";
+
 (function() {
     angular.module("rfpApp").service('fileUpload', ['$http', '$q', function($http, $q) {
         this.uploadFileToUrl = function(file, uploadUrl) {
@@ -7,7 +9,9 @@
 
             $http.post(uploadUrl, fd, {
                     transformRequest: angular.identity,
-                    headers: { 'Content-Type': undefined }
+                    headers: {
+                        'Content-Type': undefined
+                    }
                 })
                 .success(function(data) {
                     deferred.resolve(data);
@@ -16,6 +20,6 @@
                     deferred.reject(err);
                 });
             return deferred.promise;
-        }
+        };
     }]);
 })();
